@@ -9,7 +9,6 @@ import com.template.game.ui.abstractions.BasicScreen;
 import com.template.game.ui.abstractions.ScreenSwitcher;
 import com.template.game.ui.abstractions.ScreenWithInput;
 import com.template.game.utils.Constants;
-import sun.util.resources.ar.CurrencyNames_ar_TN;
 
 /**
  * Main class of the game
