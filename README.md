@@ -1,5 +1,5 @@
 # LibGDX_Project_Template
-A project template with a clear structure, built-in screen handling logic, resource manager that manages all heavy assets like textures and sounds...
+A project template with a clear structure, built-in screen handling logic, resource manager that manages all heavy assets like textures and sounds... Why? To avoid writing the same code over and over again when creating a new project.
 
 The template already has a loading screen implementation, game screen implementation and a game-world instance. 
 
