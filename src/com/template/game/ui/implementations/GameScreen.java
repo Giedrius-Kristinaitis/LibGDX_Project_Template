@@ -34,11 +34,11 @@ public class GameScreen extends StagedScreen {
     /**
      * Draws the game
      * @param delta time elapsed since last render
+     * @param batch batch used to draw sprites to
+     * @param cam world's camera
      */
     @Override
-    public void draw(SpriteBatch batch, float delta) {
-        OrthographicCamera cam = (OrthographicCamera) port.getCamera();
-
+    public void draw(SpriteBatch batch, OrthographicCamera cam, float delta) {
         cam.update();
 
         batch.setProjectionMatrix(cam.combined);
