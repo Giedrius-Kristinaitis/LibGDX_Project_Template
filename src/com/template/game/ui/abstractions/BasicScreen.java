@@ -58,8 +58,10 @@ public abstract class BasicScreen extends ScreenAdapter {
     /**
      * Called when the screen should render itself
      * @param delta time elapsed since last render
+     * @param batch batch used to draw sprites to
+     * @param cam world's camera
      */
-    public abstract void draw(SpriteBatch batch, float delta);
+    public abstract void draw(SpriteBatch batch, OrthographicCamera cam, float delta);
 
     /**
      * Called when the screen should update itself
