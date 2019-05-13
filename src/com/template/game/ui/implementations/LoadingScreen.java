@@ -93,9 +93,11 @@ public class LoadingScreen extends BasicScreen {
      * Called when the screen should render itself
      *
      * @param delta time elapsed since last render
+     * @param batch batch used to draw sprites to
+     * @param cam world's camera
      */
     @Override
-    public void draw(SpriteBatch batch, float delta) {
+    public void draw(SpriteBatch batch, OrthographicCamera cam, float delta) {
         batch.begin();
         sprite.draw(batch);
         batch.end();
