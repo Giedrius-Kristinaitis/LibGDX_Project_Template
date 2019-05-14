@@ -1,11 +1,12 @@
-package com.template.game.ui.implementations;
+package com.gasis.rts.ui.implementations;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.template.game.resources.NotLoadedException;
-import com.template.game.ui.abstractions.BasicScreen;
+import com.gasis.rts.ui.abstractions.BasicScreen;
+import com.gasis.rts.resources.NotLoadedException;
 
 import java.util.Map;
 
@@ -43,11 +44,6 @@ public class LoadingScreen extends BasicScreen {
      */
     public LoadingScreen(BasicScreen screenToSwitch, String image, boolean unloadImage, Map<String, Class> assets, String[] maps) {
         this.screenToSwitch = screenToSwitch;
-
-        if (assets == null && maps == null) {
-            switchScreen();
-        }
-
         this.image = image;
         this.assets = assets;
         this.maps = maps;
@@ -110,7 +106,7 @@ public class LoadingScreen extends BasicScreen {
      */
     @Override
     public void update(float delta) {
-        if (resources.update()) {
+        if (resources.update() || (assets == null && maps == null)) {
             if (unloadImage) {
                 resources.unload(image);
             }
@@ -148,3 +144,4 @@ public class LoadingScreen extends BasicScreen {
         screenSwitcher.showScreen(screenToSwitch);
     }
 }
+
