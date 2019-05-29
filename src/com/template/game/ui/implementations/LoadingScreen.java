@@ -108,7 +108,7 @@ public class LoadingScreen extends BasicScreen {
     public void update(float delta) {
         if (resources.update() || (assets == null && maps == null)) {
             if (unloadImage) {
-                resources.unload(image);
+                resources.unload(image, Texture.class);
             }
 
             switchScreen();
@@ -132,9 +132,7 @@ public class LoadingScreen extends BasicScreen {
      * @param maps maps to load
      */
     private void loadMaps(String[] maps) {
-        for (String map: maps) {
-            resources.loadMap(map);
-        }
+        resources.loadMaps(maps);
     }
 
     /**
