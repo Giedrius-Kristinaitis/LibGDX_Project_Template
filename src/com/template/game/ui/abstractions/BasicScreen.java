@@ -51,6 +51,8 @@ public abstract class BasicScreen extends ScreenAdapter {
         // of course I could call draw() before update() to avoid this issue,
         // but I think it is better for game state to update before drawing, so...
         if (!disposed) {
+            port.apply();
+            port.getCamera().update();
             draw(batch, (OrthographicCamera) port.getCamera(), delta);
         }
     }
