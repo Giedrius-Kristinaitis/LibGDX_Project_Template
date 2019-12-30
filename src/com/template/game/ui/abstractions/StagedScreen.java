@@ -20,7 +20,7 @@ public abstract class StagedScreen extends ScreenWithInput {
     public void initialize() {
         super.initialize();
 
-        stage = new Stage(new ScreenViewport(), batch);
+        stage = new Stage(new ScreenViewport());
     }
    
     /**
