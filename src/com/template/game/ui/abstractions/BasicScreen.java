@@ -95,6 +95,17 @@ public abstract class BasicScreen extends ScreenAdapter {
     public void setViewport(Viewport port) {
         this.port = port;
     }
+    
+    /**
+     * Called when the window resizes
+     *
+     * @param width  window width
+     * @param height window height
+     */
+    @Override
+    public void resize(int width, int height) {
+        port.update(width, height, true);
+    }
 
     /**
      * Gets rid of heavy resources
