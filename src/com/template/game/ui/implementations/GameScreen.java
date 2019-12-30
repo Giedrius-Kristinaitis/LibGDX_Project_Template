@@ -15,10 +15,11 @@ public class GameScreen extends StagedScreen {
     private GameWorld game;
 
     /**
-     * Called when the screen becomes the current screen
+     * Called when the screen needs to be initialized
      */
     @Override
-    public void show() {
+    public void initialize() {
+        super.initialize();
         game = new GameWorld(resources);
     }
 
