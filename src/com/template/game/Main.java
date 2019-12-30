@@ -57,22 +57,22 @@ public class Main extends Game implements ScreenSwitcher {
 	 * @param screen screen to be shown
 	 */
 	@Override
-	public void showScreen(BasicScreen screen) {
-		if (currentScreen != null) {
-			currentScreen.dispose();
-		}
+    	public void showScreen(BasicScreen screen) {
+        	if (currentScreen != null) {
+            	currentScreen.dispose();
+        	}
 
-		this.currentScreen = screen;
-		this.currentScreen.setViewport(port);
-		this.currentScreen.initialize();
-		this.currentScreen.setResources(resources);
-		this.currentScreen.setScreenSwitcher(this);
+        	this.currentScreen = screen;
+        	this.currentScreen.setViewport(port);
+        	this.currentScreen.setResources(resources);
+        	this.currentScreen.initialize();
+        	this.currentScreen.setScreenSwitcher(this);
 
-		this.setScreen(currentScreen);
+        	this.setScreen(currentScreen);
 
-		// if the screen has input handling, register it
-		if (currentScreen instanceof ScreenWithInput) {
-			Gdx.input.setInputProcessor(((ScreenWithInput) currentScreen).getInputProcessor());
-		}
-	}
+        	// if the screen has input handling, register it
+        	if (currentScreen instanceof ScreenWithInput) {
+        	    	Gdx.input.setInputProcessor(((ScreenWithInput) currentScreen).getInputProcessor());
+        	}
+    	}
 }
