@@ -21,6 +21,14 @@ public abstract class StagedScreen extends ScreenWithInput {
         super.initialize();
 
         stage = new Stage(new ScreenViewport(), batch);
+    }
+   
+    /**
+     * Called when the screen is shown
+     */
+    @Override
+    public void show() {
+        super.show();
         setupUI(stage);
     }
 
