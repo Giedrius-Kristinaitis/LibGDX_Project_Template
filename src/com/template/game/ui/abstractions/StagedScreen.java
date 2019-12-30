@@ -38,8 +38,10 @@ public abstract class StagedScreen extends ScreenWithInput {
      */
     @Override
     public void render(float delta) {
+        port.apply();
         super.render(delta);
 
+        stage.getViewport().apply();
         stage.act(delta);
         stage.draw();
     }
