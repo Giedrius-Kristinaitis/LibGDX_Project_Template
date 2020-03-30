@@ -59,7 +59,7 @@ public class Main extends Game implements ScreenSwitcher {
 	@Override
     	public void showScreen(BasicScreen screen) {
         	if (currentScreen != null) {
-            	currentScreen.dispose();
+            		currentScreen.dispose();
         	}
 
         	this.currentScreen = screen;
