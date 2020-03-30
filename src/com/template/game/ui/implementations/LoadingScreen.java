@@ -1,12 +1,12 @@
-package com.gasis.rts.ui.implementations;
+package com.template.game.ui.implementations;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.gasis.rts.ui.abstractions.BasicScreen;
-import com.gasis.rts.resources.NotLoadedException;
+import com.template.game.ui.abstractions.BasicScreen;
+import com.template.game.resources.NotLoadedException;
 
 import java.util.Map;
 
