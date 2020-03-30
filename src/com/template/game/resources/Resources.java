@@ -1,4 +1,4 @@
-package com.gasis.rts.resources;
+package com.template.game.resources;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
